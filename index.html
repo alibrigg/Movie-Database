@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/6e97bd15e5.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</head>
+<body>
+    <section id="landing">
+        <nav>
+            <div class="nav__container">
+                <img src="./assets/header-background.jpg" alt="" class="nav__background">
+                    <div class="nav__logo">
+                        <img class="nav__logo--img" src="./assets/logo-black.png" alt="Logo" class="nav__logo">
+                    </div>
+            <ul class="nav__links">
+                <li>
+                    <a href="#features" class="nav__link">Home</a>
+                </li>
+                 <li>
+                    <a href="" class="nav__link">Find a Movie</a>
+                </li>
+                 <li>
+                    <a href="" class="nav__link nav__link--button">Contact</a>
+                </li>
+            </ul>
+            </div>    
+        </nav>
+        <header>
+            <div class="container">
+                <div class="row">
+                    <div class="header__description">
+                        <h1 class="header__description--title">
+                        The Open Movie Database
+                        </h1>
+                        <h3 class="header__description--subtitle">
+                        Browse Our Movies
+                        </h3>
+                        <div class="header__search">
+                            <input type="text" class="header__search--input" placeholder="Search by Title, Year Released, or Keywords" >
+                            <button class="header__search--btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </section>
+    <section id="results">
+        <div class="container">
+            <div class="row">
+                <div class="results__filter">Search results:
+                    <select id="filter" onchange="filterBooks(event)">
+                        <option value=""disabled selected>Sort</option>
+                        <option value="A TO Z">Alphabetical A to Z</option>
+                        <option value="Z TO A">Alphabetical Z to A</option>
+                        <option value="NEW TO OLD">Newest to oldest</option>
+                        <option value="OLD TO NEW">Oldest to newest</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer>
+        <div class="container">
+            <div class="row footer__row">
+            <figure>
+                <img class="footer__logo--img" src="./assets/logo-black.png" alt="Logo">
+            </figure>
+            <div class="footer__list">
+                <a href="#" class="
+                footer__link 
+                link__hover-effect
+                link__hover-effect--white
+                ">Home</a>
+                <a href="#" class="
+                footer__link 
+                link__hover-effect
+                link__hover-effect--white
+                ">Find a Movie</a>
+                <a href="#" onclick="toggleModal()" class="
+                footer__link 
+                link__hover-effect
+                link__hover-effect--white
+                ">Contact</a>
+                <div class="footer__copyright">
+                <p class="footer__copyright">&copy; 2026 Allison Morris. All rights reserved.</p>
+            </div>
+            </div>
+            
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
