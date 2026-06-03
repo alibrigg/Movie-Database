@@ -1,9 +1,11 @@
+const searchInput = document.getElementById("search-input");
+
 async function main() {
     const moviesWrapper = document.querySelector(".movies");
-    document.body.classList.add('is-loading');          // show spinner
-    const res = await fetch('https://www.omdbapi.com/?apikey=82e9f7af&s=star%20wars');
+    document.body.classList.add('is-loading');          
+    const res = await fetch(`https://www.omdbapi.com/?apikey=82e9f7af&s=${searchInput.value.trim()}`);
     const moviesData = await res.json();
-    document.body.classList.remove('is-loading');        // hide spinner
+    document.body.classList.remove('is-loading');        
     moviesWrapper.innerHTML = moviesData.Search
         .map(
             (movie) => `<div class="movie">
@@ -28,10 +30,10 @@ main();
 
 async function renderMovies(filter) {
     const moviesWrapper = document.querySelector(".movies");
-    document.body.classList.add('is-loading');          // show spinner
-    const res = await fetch('https://www.omdbapi.com/?apikey=82e9f7af&s=star%20wars');
+    document.body.classList.add('is-loading');          
+    const res = await fetch(`https://www.omdbapi.com/?apikey=82e9f7af&s=${searchInput.value.trim()}`);
     const moviesData = await res.json();
-    document.body.classList.remove('is-loading');        // hide spinner
+    document.body.classList.remove('is-loading');       
 
     if (filter === 'A TO Z') {
         moviesData.Search.sort((a, b) => a.Title.localeCompare(b.Title));
@@ -63,3 +65,12 @@ async function renderMovies(filter) {
                         </div>`
         ).join('');
 }
+
+searchInput.addEventListener("keyup", (event) => {
+    const searchValue = searchInput.value.trim().toLowerCase();
+
+    // Only search when user presses Enter
+    if (event.key === "Enter" && searchValue !== "") {
+        main();
+    }
+});

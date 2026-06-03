@@ -271,12 +271,12 @@ select {
 
 .movies__loading--spinner {
   display: none;
- 
 }
 
 body.is-loading .movies__loading--spinner {
   display: block;
 }
+
 
 .fa-spinner {
     animation: rotate 600ms infinite linear;

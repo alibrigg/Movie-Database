@@ -6,7 +6,7 @@
     <title>Movie Database</title>
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/6e97bd15e5.js" crossorigin="anonymous"></script>
-    <script src="index.js"></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
     <section id="landing">
@@ -39,8 +39,8 @@
                         <h3 class="header__description--subtitle">
                         Browse Our Movies
                         </h3>
-                        <div class="header__search" onchange="renderMovies(searchInput)">
-                            <input type="text" class="header__search--input" placeholder="Search by Title, Year Released, or Keywords" >
+                        <div class="header__search" >
+                            <input type="search" id="search-input" class="header__search--input" placeholder="Search by Title, Year Released, or Keywords" >
                             <button class="header__search--btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </div>
