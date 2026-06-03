@@ -18,13 +18,13 @@
                     </div>
             <ul class="nav__links">
                 <li>
-                    <a href="#features" class="nav__link">Home</a>
+                    <a href="#" class="nav__link">Home</a>
                 </li>
                  <li>
-                    <a href="" class="nav__link">Find a Movie</a>
+                    <a href="#search-input" class="nav__link">Find a Movie</a>
                 </li>
                  <li>
-                    <a href="" class="nav__link nav__link--button">Contact</a>
+                    <a href="mailto:bfritz@fadingsignal.com" target="_blank" class="nav__link nav__link--button">Contact</a>
                 </li>
             </ul>
             </div>    
@@ -40,7 +40,7 @@
                         Browse Our Movies
                         </h3>
                         <div class="header__search" >
-                            <input type="search" id="search-input" class="header__search--input" placeholder="Search by Title, Year Released, or Keywords" >
+                            <input type="search" id="search-input" class="header__search--input" placeholder="Search by Title or Keywords" >
                             <button class="header__search--btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
                     </div>
@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row">
                 <div class="results__filter">Search results:
-                    <select id="filter" onchange="renderMovies(event.target.value)">
+                    <select id="filter">
                         <option value=""disabled selected>Sort</option>
                         <option value="A TO Z">Alphabetical A to Z</option>
                         <option value="Z TO A">Alphabetical Z to A</option>
@@ -83,12 +83,12 @@
                 link__hover-effect
                 link__hover-effect--white
                 ">Home</a>
-                <a href="#" class="
+                <a href="#search-input" class="
                 footer__link 
                 link__hover-effect
                 link__hover-effect--white
                 ">Find a Movie</a>
-                <a href="#" onclick="toggleModal()" class="
+                <a href="mailto:bfritz@fadingsignal.com" target="_blank" class="
                 footer__link 
                 link__hover-effect
                 link__hover-effect--white
