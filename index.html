@@ -39,7 +39,7 @@
                         <h3 class="header__description--subtitle">
                         Browse Our Movies
                         </h3>
-                        <div class="header__search">
+                        <div class="header__search" onchange="renderMovies(searchInput)">
                             <input type="text" class="header__search--input" placeholder="Search by Title, Year Released, or Keywords" >
                             <button class="header__search--btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                         </div>
@@ -52,7 +52,7 @@
         <div class="container">
             <div class="row">
                 <div class="results__filter">Search results:
-                    <select id="filter" onchange="filterBooks(event)">
+                    <select id="filter" onchange="renderMovies(event.target.value)">
                         <option value=""disabled selected>Sort</option>
                         <option value="A TO Z">Alphabetical A to Z</option>
                         <option value="Z TO A">Alphabetical Z to A</option>
@@ -60,7 +60,13 @@
                         <option value="OLD TO NEW">Oldest to newest</option>
                     </select>
                 </div>
+                 <div class="movies__loading">
+                        <i class="fas fa-spinner movies__loading--spinner"></i>
+                </div>
             </div>
+        </div>
+        <div class="movies">
+                       
         </div>
     </section>
 
