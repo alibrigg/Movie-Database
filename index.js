@@ -69,7 +69,6 @@ async function renderMovies(filter) {
 searchInput.addEventListener("keyup", (event) => {
     const searchValue = searchInput.value.trim().toLowerCase();
 
-    // Only search when user presses Enter
     if (event.key === "Enter" && searchValue !== "") {
         main();
     }
