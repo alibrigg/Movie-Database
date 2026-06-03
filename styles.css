@@ -270,12 +270,12 @@ select {
 }
 
 .movies__loading--spinner {
-  display: none !important;
+  display: none;
  
 }
 
-.movies__loading .movies__loading--spinner {
-  display: block !important;
+body.is-loading .movies__loading--spinner {
+  display: block;
 }
 
 .fa-spinner {
